@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+	{% if user.is_authenticated %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit" />
+	{% else %}
+	<p>Logged out!</p>
+    <a href="{% url 'login'%}">Click here to login again.</a>
+	{% endif %}
+
+</form>
+{% endblock %}

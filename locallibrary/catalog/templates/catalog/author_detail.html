@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Author: {{ author }}</h1>
+  <p>{{author.date_of_birth}}-{{author.date_of_death}}</p>
+
+  <div style="margin-left:20px;margin-top:20px">
+    <h4>Edit author</h4>
+    <li><a href="{% url 'authors' %}">Author delete</a></li>
+	
+	<h4>Books</h4>
+	<a href="{% url 'books' %}">to_book_list</a>	
+	<p>{{book_detail}}</p>
+	{% if book_detail %}
+	  {% for book in book_detail %}
+	    {{book}}
+	    <strong><a href="">2</a></strong>
+	  {% endfor %}
+	{% else %}
+	  <p>There are no books here.</p>
+	{% endif %} 
+  
+  </div>
+{% endblock %}
+<li><a href="{% url 'author_update' %}">Author update</a></li>
+	<li><a href="{% url 'author_delete' %}">Author delete</a></li>
+
+
+
+	  
