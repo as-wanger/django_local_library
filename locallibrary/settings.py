@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open('D:/Anaconda3/Lib/site-packages/django/django_repo/1. locallibrary tutorial in MDN/secret_key1.txt') as f:
-    SECRET_KEY = f.read()
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'q286r2-aebul95kgbrp4whk)h4l&-+28so&i-*+m__raf6wfr=')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [#
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
