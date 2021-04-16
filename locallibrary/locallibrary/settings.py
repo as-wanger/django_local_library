@@ -25,7 +25,7 @@ with open('D:/Anaconda3/Lib/site-packages/django/django_repo/1. locallibrary tut
     SECRET_KEY = f.read().strip()
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', False) )
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = []
 
