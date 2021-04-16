@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 with open('D:/Anaconda3/Lib/site-packages/django/django_repo/1. locallibrary tutorial in MDN/secret_key1.txt') as f:
-    SECRET_KEY = f.read().strip()
+    SECRET_KEY = f.read()
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
